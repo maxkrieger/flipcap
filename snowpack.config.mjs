@@ -10,7 +10,12 @@ export default {
         src: "/",
     },
     buildOptions: {
-        watch: true,
-        sourcemap: true
-    }
+        sourcemap: "inline",
+        jsxInject: "import React from 'react';"
+    },
+    optimize: {
+        bundle: true,
+        minify: true,
+        target: 'es2018',
+    },
 };

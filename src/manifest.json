@@ -2,8 +2,23 @@
   "$schema": "https://raw.githubusercontent.com/PrsPrsBK/ffext-manifest-schema/master/ffext.json",
   "name": "flipcap",
   "manifest_version": 2,
-  "permissions": ["<all_urls>"],
+  "version": "0.0.1",
+  "permissions": ["<all_urls>", "tabs", "http://*/", "https://*/", "downloads"],
   "background": {
-    "scripts": ["background.js"]
+    "page": "background.html"
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Flipcap",
+    "default_popup": "popup/popup.html"
+  },
+  "commands": {
+    "take_screenshot": {
+      "description": "take a screenshot",
+      "suggested_key": {
+        "default": "Ctrl+Shift+2",
+        "mac": "Command+Shift+2"
+      }
+    }
   }
 }
