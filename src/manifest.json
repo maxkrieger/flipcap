@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/PrsPrsBK/ffext-manifest-schema/master/ffext.json",
+  "name": "flipcap",
+  "manifest_version": 2,
+  "permissions": ["<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
